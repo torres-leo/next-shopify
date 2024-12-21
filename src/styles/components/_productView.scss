@@ -1,0 +1,7 @@
+@layer components {
+	.product {
+		&__image {
+			@apply after:content-[""] after:w-full after:h-full after:inset-0 after:absolute after:bg-inherit after:blur-lg after:contrast-200 after:-z-10;
+		}
+	}
+}
