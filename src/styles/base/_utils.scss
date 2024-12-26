@@ -1,0 +1,27 @@
+@layer utilities {
+	.custom-input {
+		@apply bg-transparent border-0 border-b-[1px] border-zinc-800 py-2 px-2;
+		@apply focus:outline-none focus:border-zinc-600;
+		@apply placeholder:text-gray-500;
+		@apply selection:bg-indigo-600;
+		@apply peer-placeholder-shown:bg-transparent;
+
+		&:not(:placeholder-shown) {
+			@apply bg-white/90 text-black rounded-md;
+		}
+
+		&.login {
+			&:not(:placeholder-shown) {
+				@apply bg-transparent text-white rounded-none;
+			}
+		}
+	}
+
+	main :where(h1, h2, h3, h4, p) {
+		@apply selection:bg-indigo-500 selection:text-white;
+	}
+
+	.max-form-container {
+		@apply max-w-2xl w-full mx-auto;
+	}
+}

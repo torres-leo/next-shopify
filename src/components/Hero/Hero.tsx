@@ -17,7 +17,7 @@ export default function Hero() {
 				</div>
 				<div className='relative z-10 pb-8 bg-black sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32'>
 					<div className='sm:text-center lg:text-left'>
-						<h1 className='text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl'>
+						<h1 className='text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-7xl'>
 							<span className='block xl:inline-block'>Welcome to</span>
 							<span className='block text-purple-400 xl:inline-block'>Next Store</span>
 						</h1>

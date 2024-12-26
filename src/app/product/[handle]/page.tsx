@@ -32,7 +32,6 @@ async function ProductPage({ searchParams }: Props) {
 	const product = products[0];
 
 	if (!id) redirect('/store');
-	// if (!product.id) redirect('/store');
 
 	return <ProductView product={product} />;
 }
