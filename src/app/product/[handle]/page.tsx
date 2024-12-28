@@ -8,12 +8,12 @@ interface Props {
 }
 
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
-	const { id } = searchParams;
+	const { id } = await searchParams;
 	const products = await getProducts(id);
 	const product = products[0];
 
 	return {
-		title: product.title,
+		title: `Store - ${product.title}`,
 		description: product.description,
 		openGraph: {
 			images: [
@@ -27,7 +27,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 }
 
 async function ProductPage({ searchParams }: Props) {
-	const { id } = searchParams;
+	const { id } = await searchParams;
 	const products = await getProducts(id);
 	const product = products[0];
 

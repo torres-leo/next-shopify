@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.scss';
-import Header from '@/components/shared/header/Header';
-import Footer from '@/components/shared/footer/Footer';
+import Header from '@/components/shared/Header/Header';
+import Footer from '@/components/shared/Footer/Footer';
 
 const geistSans = localFont({
 	src: './fonts/GeistVF.woff',
@@ -29,8 +29,9 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-950`}>
 				<Header />
-				<main className='max-w-screen-xl mx-auto px-8 xl:px-0'>{children}</main>
+				<main className='max-w-screen-xl w-full mx-auto px-8 xl:px-0'>{children}</main>
 				<Footer />
+				<div id='portal-root'></div>
 			</body>
 		</html>
 	);
