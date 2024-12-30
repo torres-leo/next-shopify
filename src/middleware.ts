@@ -7,6 +7,8 @@ export async function middleware(request: NextRequest) {
 	const accessToken = cookiesStore.get('accessToken')?.value;
 
 	if (accessToken) return NextResponse.redirect(new URL('/store', request.url));
+
+	return NextResponse.redirect(new URL('/login', request.url));
 }
 
 export const config = {
