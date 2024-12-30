@@ -48,7 +48,10 @@ function Navbar({ user }: Props) {
 					{user ? (
 						<div className='flex gap-x-3 items-center'>
 							<NoSSRShoppingCart />
-							<span>{user}</span>
+
+							<Link href='/my-account' className={`${isActive('/my-account') ? 'text-yellow-400' : 'text-white'}`}>
+								My account
+							</Link>
 
 							<button
 								className='bg-red-500 px-3 rounded py-1 hover:bg-red-600 transition-colors duration-150 inline-flex items-center gap-x-2'
